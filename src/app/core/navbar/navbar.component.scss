@@ -1,6 +1,7 @@
 .nav{
   padding: 20px 150px;
   display: flex;
+  width: calc(100% - 300px);
   justify-content: space-between;
   box-shadow: 5px -20px 50px gray;
 
@@ -8,7 +9,7 @@
     font-size: 2.2rem;
     text-decoration: none;
     color: black;
-    background-color: #b32911;
+    background-color: #ea5b31;
     padding: 13px 40px;
     color: #fff;
     border-radius: 40px;
@@ -16,5 +17,13 @@
     cursor: pointer;
     font-family: 'Noto Sans JP', sans-serif;
     letter-spacing: 0.2rem;
+  }
+}
+
+@media(max-width: 1248px) {
+  .nav {
+    a {
+      display: none;
+    }
   }
 }

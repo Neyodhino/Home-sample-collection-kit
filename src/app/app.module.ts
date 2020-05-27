@@ -14,7 +14,7 @@ import { LandingPageComponent } from './landingPage/landingPage.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

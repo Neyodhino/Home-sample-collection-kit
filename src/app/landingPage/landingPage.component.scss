@@ -23,7 +23,7 @@
   }
   button{
     margin-top: 23px;
-    background-color: #b32911;
+    background-color: #ea5b31;
     padding: 16px 20px;
     color: #fff;
     border-radius: 40px;
@@ -55,6 +55,228 @@
         font-size: 3.7rem;
         letter-spacing: 0.2rem;
       }
+    }
+  }
+}
+.kit{
+  margin-top: 50px;
+  background-color: #ea5b31;
+  &__container {
+    padding: 50px 0px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    &-text{
+      color: white;
+
+      h1{
+        font-size: 3.7rem;
+        margin-bottom: 20px;
+        letter-spacing: 0.2rem;
+      }
+      ul{
+        list-style: none;
+        font-size: 1.5rem;
+        line-height: 3rem;
+        li{
+          svg{
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+.delivery{
+  margin-top: 100px;
+  &__content{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+  }
+  &__image{
+    width: 200%;
+    height: 200%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text{
+    margin-left: 70px;
+    h1{
+      text-align: center;
+    }
+    p{
+      font-size: 1.5rem;
+      color: #676767;
+      line-height: 3rem;
+      text-align: justify;
+      margin-top: 30px;
+    }
+    ol{
+      margin-left: 40px;
+      margin-top: 20px;
+      font-size: 1.4rem;
+      line-height: 3rem;
+      color: #676767;
+    }
+  }
+}
+
+footer{
+  margin-top: 10px;
+  justify-content: space-between;
+  background-color: black;
+  padding: 50px 100px;
+  display: flex;
+  color: white;
+  p{
+    font-size: 1.3rem;
+    a{
+      color: white;
+    }
+  }
+}
+//Style for mini laptop
+@media(max-width: 1780px) {
+  .headline{
+    width: 85%;
+    &__text{
+      p{
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .main__problem{
+    width: 85%;
+    &-text{
+      p{
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .delivery__content{
+    width: 85%;
+  }
+  .delivery__image{
+    width: 200%;
+  }
+  .delivery__text{
+    p{
+      font-size: 1.8rem;
+    }
+    ol{
+      line-height: 3.9rem;
+      font-size: 1.8rem;
+    }
+  }
+  footer {
+    p{
+      font-size: 1.6rem;
+    }
+  }
+}
+
+//Styles for Tablet
+
+@media(max-width: 1510px) {
+  .headline{
+    width: 90%;
+    &__text{
+      h2{
+        font-size: 4rem;
+      }
+      p{
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .main__problem{
+    width: 85%;
+    &-text{
+      p{
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .delivery__content{
+    width: 85%;
+  }
+  .delivery__image{
+    width: 200%;
+  }
+  .delivery__text{
+    p{
+      font-size: 1.8rem;
+    }
+    ol{
+      line-height: 3.9rem;
+      font-size: 1.8rem;
+    }
+  }
+  .kit__container{
+    justify-content: space-between;
+  }
+  footer {
+    p{
+      font-size: 1.6rem;
+    }
+  }
+}
+@media(max-width: 1266px) {
+  .headline{
+    width: 90%;
+    &__image{
+      width: 120%;
+      img{
+        width: 120%;
+        height: 100%;
+      }
+    }
+    &__text{
+      h2{
+        font-size: 4rem;
+        line-height: 6rem;
+      }
+      p{
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .main__problem{
+    width: 85%;
+    &-image{
+      width: 50%;
+    }
+    &-text{
+      p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .delivery__content{
+    width: 85%;
+  }
+  .delivery__image{
+    width: 200%;
+  }
+  .delivery__text{
+    p{
+      font-size: 1.8rem;
+    }
+    ol{
+      line-height: 3.9rem;
+      font-size: 1.8rem;
+    }
+  }
+  .kit__container{
+    justify-content: space-between;
+  }
+  footer {
+    p{
+      font-size: 1.6rem;
     }
   }
 }
