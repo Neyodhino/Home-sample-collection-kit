@@ -1,0 +1,60 @@
+
+.headline {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 50px;
+
+  &__text {
+    margin-top: -15px;
+    margin-left: 150px;
+
+    p{
+      font-size: 1.5rem;
+      color: gray;
+      letter-spacing: 0.1rem;
+    }
+  }
+  h2{
+    font-size: 5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bolder;
+  }
+  button{
+    margin-top: 23px;
+    background-color: #b32911;
+    padding: 16px 20px;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.2rem;
+    outline: none;
+  }
+}
+
+.main{
+  margin-top: 150px;
+  &__problem{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+
+    &-text {
+      margin-right: 40px;
+      p{
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: #676767;
+        text-align: justify;
+        margin-top: 15px;
+      }
+      h1{
+        font-size: 3.7rem;
+        letter-spacing: 0.2rem;
+      }
+    }
+  }
+}
