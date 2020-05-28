@@ -1,0 +1,26 @@
+<section class="header">
+  <a [routerLink] = "['/home']"><img src="../../assets/images/logo.png" alt="logo"></a>
+</section>
+
+<section class="container">
+  <div class="login">
+    <h3>login</h3>
+      <form>
+        <div class="form__control">
+            <input type="email" placeholder="Username" class="form__control-input" formControlName="email" required>
+        </div>
+        <div class="form__control">
+            <input type="password" name="password" placeholder="Password" class="form__control-input" formControlName="password" required>
+        </div>
+        <div>
+          <a class="remember__link">Don't remember password?</a>
+        </div>
+        <button class="btn">login</button>
+    </form>
+  </div>
+</section>
+<hr style="width: 100%;">
+<footer>
+  <a href="https://lifebank.ng" target="_blank">with <fa-icon [icon]="heart"></fa-icon> from Lifebank</a>
+</footer>
+

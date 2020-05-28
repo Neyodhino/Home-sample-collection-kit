@@ -1,0 +1,81 @@
+.header {
+  padding: 40px;
+}
+
+.container{
+  height: 68vh;
+}
+
+.login{
+  width: 40%;
+  margin: 80px auto;
+  text-align: center;
+  h3{
+    font-size: 2.5rem;
+  }
+  form{
+    margin-top: 50px;
+  }
+}
+.form__control {
+  margin-bottom: 37px;
+
+  &-input {
+      padding: 20px;
+      width: 55%;
+      outline: none;
+      border: none;
+      border-radius: 8px;
+      border: 1px solid gray;
+      &::placeholder {
+          font-size: 15.8px;
+          font-family: 700;
+          font-family: 'poppins' sans-serif;
+      }
+  }
+}
+.remember__link {
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+
+  &:hover {
+      text-decoration: underline;
+  }
+}
+.btn {
+  color: white;
+  outline: none;
+  border: none;
+  background-color: orangered;
+  border-radius: 40px;
+  cursor: pointer;
+  padding: 13px 70px;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 20px 30px 30px #c7c7c7c7;
+}
+
+hr {
+  margin-top: 20px;
+  border: none;
+  border-top: 2px double 	#E8E8E8;
+  color: #333;
+  height: 5px;
+  width: 100%;
+}
+
+footer{
+  justify-content: space-between;
+  padding: 30px 100px;
+  display: flex;
+  a{
+    margin: 0 auto;
+    font-size: 1.3rem;
+    color: orangered;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
