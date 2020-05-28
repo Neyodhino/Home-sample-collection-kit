@@ -22,7 +22,8 @@
     font-weight: bolder;
   }
   button{
-    margin-top: 23px;
+    height: 100%;
+    margin-top: 50px;
     background-color: #ea5b31;
     padding: 16px 20px;
     color: #fff;
@@ -126,18 +127,25 @@
   }
 }
 
+hr {
+  margin-top: 20px;
+  border: none;
+  border-top: 2px double #333;
+  color: #333;
+  height: 5px;
+  width: 100%;
+}
+
 footer{
-  margin-top: 10px;
   justify-content: space-between;
-  background-color: black;
   padding: 50px 100px;
   display: flex;
-  color: white;
-  p{
+  a{
+    margin: 0 auto;
     font-size: 1.3rem;
-    a{
-      color: white;
-    }
+    color: orangered;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
   }
 }
 //Style for mini laptop

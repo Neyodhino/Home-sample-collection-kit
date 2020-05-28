@@ -1,6 +1,6 @@
   <section class="headline">
     <div class="headline__image">
-      <img src="../../assets/images/kit.jpg" alt="headline image">
+      <img src="../../assets/images/home-kit.png" alt="headline image">
     </div>
     <div class="headline__text">
       <h2>Easy to use</h2>
@@ -8,7 +8,18 @@
       <h2>sample</h2>
       <h2>collection kit.</h2>
       <p>LifeBank has developed a simple personal sample collection kit that provides a convenient and reliable option for patient sample collection from the comfort and safety of their home.</p>
-      <button>Download Instruction</button>
+      <div style="display: flex; justify-content: space-around;">
+      <button (click)="downloadFile()">Download Instruction</button>
+        <figure style="margin-top: 50px;">
+          <!-- <figcaption style="font-size: 1.5rem; margin-bottom: 10px; font-family: 'Noto Sans JP', sans-serif;">Listen to the instruction or download:</figcaption> -->
+          <audio
+              controls
+              src="../../assets/audio/how-to-use.mpeg">
+                  Your browser does not support the
+                  <code>audio</code> element.
+          </audio>
+      </figure>
+    </div>
     </div>
   </section>
 
@@ -83,8 +94,8 @@
     </div>
     </section>
   </main>
+<hr style="width: 90%;">
+<footer>
+     <a href="https://lifebank.ng" target="_blank">with <fa-icon [icon]="heart"></fa-icon> from Lifebank</a>
+</footer>
 
-  <footer>
-      <p>Call us on +234 9097167238 to place your order now! (Limited stock available)</p>
-      <p>Visit  <a href="https://www.covid.lifebank.ng/covidkit">www.covid.lifebank.ng/covidkit</a> to learn more about our kit and delivery discount package! </p>
-  </footer>
