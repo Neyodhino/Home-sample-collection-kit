@@ -1,0 +1,67 @@
+<h2 mat-dialog-title>Request a kit</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]= "requestForm">
+
+  <mat-form-field appearance="outline">
+    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose date and time" [disabled]="disabled" formControlName = "dateTime">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+      [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+      [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian"
+      ></ngx-mat-datetime-picker>
+      <mat-error *ngIf="requestForm.get('dateTime').errors?.required">
+        Choose a date and time
+      </mat-error>
+  </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Patient Name</mat-label>
+      <input matInput placeholder="Patient Name" formControlName="name">
+      <mat-error *ngIf="requestForm.get('name').errors?.required">
+        Patient Name is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Patient Code</mat-label>
+      <input matInput placeholder="Patient Code" formControlName="code">
+      <mat-error *ngIf="requestForm.get('code').errors?.required">
+        Patient Code is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Patient Address</mat-label>
+      <input matInput placeholder="Patient Address" formControlName="address">
+      <mat-error *ngIf="requestForm.get('address').errors?.required">
+        Patient Address is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Patient Phone Number</mat-label>
+      <input matInput placeholder="Patient Phone Number" formControlName="phone">
+      <mat-error *ngIf="requestForm.get('phone').errors?.required">
+        Patient Phone Number is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Patient City</mat-label>
+      <input matInput placeholder="Patient City" formControlName="city">
+      <mat-error *ngIf="requestForm.get('city').errors?.required">
+        Patient city is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Patient State</mat-label>
+      <input matInput placeholder="Patient State" formControlName="state">
+      <mat-error *ngIf="requestForm.get('state').errors?.required">
+        Patient State is required
+      </mat-error>
+    </mat-form-field>
+    <button class="btn" [disabled]="!requestForm.valid" [mat-dialog-close] = "requestForm.value">Request</button>
+</form>
+</mat-dialog-content>
+

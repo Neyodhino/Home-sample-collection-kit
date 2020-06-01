@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,16 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 })
 export class LoginComponent implements OnInit {
   heart = faHeart;
-  constructor() { }
+  loginForm: FormGroup;
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      pwd: ['', Validators.required]
+    });
+  }
 }
+

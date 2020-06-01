@@ -1,0 +1,244 @@
+@import '../../global//abstracts/variables';
+
+
+.nav{
+  padding: 5px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px -20px 50px $paragraph-color;
+  width: 100%;
+
+  &__logo {
+    width: 15%;
+    height: 15%;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  ul{
+    display: flex;
+    list-style: none;
+    font-size: 1.7rem;
+    font-family: inherit;
+
+    a{
+      cursor: pointer;
+      margin-left: 35px;
+      transition: .3s ease;
+      color: $black;
+      font-size: 2rem;
+      font-family: 'Lato', sans-serif;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+
+}
+.active{
+  border-bottom: 3px solid $primary-color;
+}
+.link_login{
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: black;
+  background-color: $primary-color;
+  padding: 16px 40px;
+  color: $button-text--color;
+  border-radius: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.2rem;
+  height: 70%;
+}
+
+.header {
+  border: .5px solid gray;
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(to right bottom, rgba($primary-color, 0.6), rgba(rgb(160, 28, 19), 0.6)),
+             url(../../assets/images/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__text{
+      width: 30%;
+      color: white;
+      margin-left: 100px;
+      margin-top: 70px;
+
+      h2{
+        font-size: 5rem;
+        letter-spacing: .3rem;
+        font-family: 'Lato', sans-serif;
+      }
+      p {
+        margin-top: 30px;
+        font-size: 1.7rem;
+        line-height: 3rem;
+        font-family: 'Lato', sans-serif;
+      }
+    }
+}
+
+.responsive-table {
+  width: 80%;
+  margin: 70px auto;
+    li {
+      border-radius: 3px;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .table-header {
+      background-color: $primary-color;
+      color: white;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .table-row {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+      font-size: 1.6rem;
+    }
+    .col{
+      width: 300px;
+    }
+    .col-14 {
+      flex-basis: 63px;
+    }
+
+    @media all and (max-width: 767px) {
+      .table-header {
+        display: none;
+      }
+      .table-row{
+
+      }
+      li {
+        display: block;
+      }
+      .col {
+
+        flex-basis: 100%;
+
+      }
+      .col {
+        display: flex;
+        padding: 10px 0;
+        &:before {
+          color: #6C7A89;
+          padding-right: 10px;
+          content: attr(data-label);
+          flex-basis: 50%;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin-top: 20px;
+    border: none;
+    border-top: 2px double 	#E8E8E8;
+    color: #333;
+    height: 5px;
+    width: 100%;
+  }
+
+  footer{
+    justify-content: space-between;
+    padding: 30px 100px;
+    display: flex;
+    a{
+      margin: 0 auto;
+      font-size: 1.5rem;
+      color: orangered;
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
+    }
+  }
+
+
+
+
+  @media(max-width: 1275px) {
+    .nav {
+      padding: 10px 50px;
+    }
+  }
+
+  @media(max-width: 1000px) {
+    .nav {
+      padding: 10px 50px;
+
+      ul{
+        a{
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 900px) {
+    .nav{
+      &__logo {
+        width: 30%;
+        height: 30%;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .nav__links {
+      display: none;
+    }
+    .link_login{
+      display: none;
+    }
+    .nav__mobile{
+      display: inline;
+    }
+  }
+
+  @media(max-width: 500px) {
+    .nav{
+      &__logo {
+        width: 50%;
+        height: 50%;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 363px) {
+    .nav{
+      padding: 10px 20px;
+      &__logo {
+        width: 60%;
+        height: 60%;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }

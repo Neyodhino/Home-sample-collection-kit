@@ -1,0 +1,43 @@
+<div class="nav">
+  <Label>Welcome, <b>{{userLastName}} {{userFirstName}}</b></Label>
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="openDialog()">
+        <span>Request a kit</span>
+      </button>
+      <button mat-menu-item (click)= "logOut()">
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>
+
+<section class="container">
+  <div class="container__informations">
+    <div class="container__information">
+      <h4>Pending Pick-up</h4>
+        <h3>{{pickUp}}</h3>
+    </div>
+
+    <div class="container__information">
+      <h4>Pending Return</h4>
+        <h3>{{responseMessage?.Returned}}</h3>
+    </div>
+
+    <div class="container__information">
+      <h4>Total Orders</h4>
+        <h3>{{responseMessage?.Total}}</h3>
+    </div>
+  </div>
+</section>
+
+<hr style="width: 100%;">
+
+<footer>
+  <a href="https://lifebank.ng" target="_blank">with <fa-icon [icon]="heart"></fa-icon> from Lifebank</a>
+</footer>
+
+

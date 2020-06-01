@@ -1,0 +1,46 @@
+
+.form__control {
+  margin-bottom: 37px;
+
+  &-input {
+      padding: 20px;
+      width: 100%;
+      outline: none;
+      border: none;
+      border-radius: 8px;
+      border: 1px solid gray;
+      &::placeholder {
+          font-size: 15.8px;
+          font-family: 700;
+          font-family: 'poppins' sans-serif;
+      }
+  }
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+button {
+  color: white;
+  outline: none;
+  border: none;
+  background-color: orangered;
+  border-radius: 40px;
+  cursor: pointer;
+  padding: 13px 70px;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 20px 30px 30px #c7c7c7c7;
+  margin-bottom: 50px;
+}
+[disabled] {
+  background-color: #cecece;
+  color: white;
+  cursor: not-allowed;
+}

@@ -1,103 +1,166 @@
 <app-navbar></app-navbar>
-  <section class="headline">
-    <div class="headline__image">
-      <img src="../../assets/images/home-kit.png" alt="headline image">
-    </div>
-    <div class="headline__text">
-      <h2>Easy to use</h2>
-      <h2>COVID-19</h2>
-      <h2>sample</h2>
-      <h2>collection kit.</h2>
-      <p>LifeBank has developed a simple personal sample collection kit that provides a convenient and reliable option for patient sample collection from the comfort and safety of their home.</p>
-      <div style="display: flex; justify-content: space-around;">
-      <button (click)="downloadFile()">Download Instruction</button>
-        <figure style="margin-top: 50px;">
-          <!-- <figcaption style="font-size: 1.5rem; margin-bottom: 10px; font-family: 'Noto Sans JP', sans-serif;">Listen to the instruction or download:</figcaption> -->
-          <audio
-              controls
-              src="../../assets/audio/how-to-use.mpeg">
-                  Your browser does not support the
-                  <code>audio</code> element.
-          </audio>
-      </figure>
-    </div>
-    </div>
-  </section>
+<section (scroll)="onWindowScroll($event);">
+    <section class="headline">
+        <div class="headline__image">
+          <img src="../../assets/images/keke.png" alt="headline image">
+        </div>
+        <div class="headline__text">
+          <h2>WHEN YOUR PATIENTS ARE SAFE, YOUR BUSINESS SUCCEEDS.</h2>
+          <p>LifeBank’s innovative “Contactless delivery” model provides a safe & secure logistics solution that provides the safest means for your patients to access your testing facilities, including coronavirus screening, from the convenience of their homes. Our trust third party logistics system offers you and your patients the safest and fastest delivery solution and value for your money!</p>
+          <div style="display: flex; justify-content: space-around;">
+          <button (click)="openDialog()">Become a Lab Partner</button>
+        </div>
+        </div>
+      </section>
 
-  <main>
-    <section class="main">
-      <div class="main__problem">
-        <div class="main__problem-text">
-          <div>
-            <h1>Problem</h1>
-            <p>Unfettered access to rapid and safe COVID-19 tests is one of the most critical factors in reducing the spread of the disease. There is a need for a simple collection method that promotes social distancing, reduces the load and pressure on the diagnostic centers and vastly increases the daily testing capacity of the diagnostic centers.</p>
+      <main>
+        <section class="main">
+          <div class="main__problem">
+            <div class="main__problem-text">
+              <div>
+                <h1>Give your patients the care they deserve</h1>
+                <p>Get the Home sample collection box for your patients!
+                  Our kit allows your patients to conveniently collect nasal and oral samples viable for the COVID-19 RT-PCR Screening Test from the safety of their homes.
+                  Each box includes easy to understand instructions to guide you through sample collection, sample labelling, waste disposal and how to properly package your sample to return to the laboratory personnel for processing.
+                  </p>
+                  <div class="kit__container-text">
+                    <h1>Kit Components</h1>
+                    <ul>
+                      <li>One viral transmission medium</li>
+                      <li>One Nasal Swab stick</li>
+                      <li>One Oral Swab sticks</li>
+                      <li>Two pairs of medical hand gloves</li>
+                      <li>One Tongue Depressor</li>
+                      <li>One Biohazard waste disposal bag</li>
+                      <li>One simple to use Instruction guide.</li>
+                    </ul>
+                    <button (click)="downloadAudioInstruction()">Download Instruction</button>
+                </div>
+              </div>
+            </div>
+            <div class="main__problem-image">
+              <img src="../../assets/images/kit.png" alt="">
+            </div>
           </div>
-          <div style="margin-top: 20px;">
-            <h1>Solution</h1>
-            <p>LifeBank has developed a simple personal sample collection kit that provides a convenient and reliable option for patient sample collection from the comfort and safety of their home. It is a simple all-inclusive kit that contains all the necessary equipment to collect both nasal and oral swab samples viable for the COVID-19 RT-PCR Screening Test.</p>
-            <p>Each box includes easy to understand instructions to guide you through sample collection, sample labelling, waste disposal and how to properly package your sample to return to the laboratory personnel for processing.</p>
+        </section>
+
+        <section class="contact__free-container">
+          <div class="contact__free">
+            <h3>Zero Contact, Zero Spread</h3>
+            <div class="contact__free-text">
+              <p class="contact__free-quest">Wondering how you can keep your patients and your laboratory staff safe while providing value and continuing your day-to-day diagnostic activities?</p>
+              <p>Our contactless pickup and drop-off delivery model is a new innovation designed to enforce social distancing and reduce contact between the dispatch and the patients during sample pickup and dropoff. Our highly skilled LabNinja’s will deliver our home sample collection kit to your patients, guide them through sample collection and safely deliver the medical samples to your laboratory doorsteps. Using our contactless pick-up and drop-off delivery innovation, together we can stop the spread by reducing person-person transmission!</p>
+            </div>
+            <a (click) = "displayLearnMore()">Lean More</a>
           </div>
-        </div>
-        <div class="main__problem-image">
-          <img src="../../assets/images/idea.jpg" alt="">
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="kit">
-      <div class="kit__container">
-        <div class="kit__container-text">
-          <h1>Kit Components</h1>
-          <ul>
-            <li> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>One viral transmission medium</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>One Nasal Swab stick</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>One Oral Swab sticks</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>Two pairs of medical hand gloves</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>One Tongue Depressor</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>One Biohazard waste disposal bag</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>One simple to use Instruction guide.</li>
-          </ul>
-        </div>
-        <div class="kit__container-text">
-          <h1>Benefits</h1>
-          <ul>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>Patients sampling and transport is safe and reliable</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>Your staff are protected from exposure to potential infection.</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>Ease of access to testing facilities for some groups, such as the elderly and the sick. </li>
-            <li> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>Improved lead time with optimum cost-effectiveness.</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>Restrict movement and reduce the person-person transfer of the virus by limiting contact.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="delivery">
-      <div class="delivery__content">
-        <div class="delivery__image">
-          <img src="../../assets/images/keke.png">
-        </div>
-        <div class="delivery__text">
-          <h1>Get your kit!</h1>
-          <p>You can order your kit by calling us on <b>09097167238</b> or Placing your order directly at covid.lifebank.ng/order-kit-plus-delivery.  You can either opt to pick up the kits yourself or have us deliver them to you using our contactless delivery system which completely removes any form of contact between your patients, our lab ninjas and your laboratory team.
-          </p>
-          <h3 style="margin-top: 20px;">Our delivery process flow is as follows:</h3>
-          <ol>
-            <li>Call center agents receives your request and assigns to a Lab Ninja</li>
-            <li>Lab Ninja picks up your order and contacts you on the scheduled delivery day</li>
-            <li>LabNinja rides to your doorstep.</li>
-            <li>Lab Ninja calls you and further explains the terms of the delivery scheme - No contact, No exchange of items, Follow directions on the body of the vehicle.</li>
-            <li>Once you step out, Lab Ninja opens the section where your kit(s) is by pressing a button</li>
-            <li>You collect the kit from the kit section.</li>
-            <li>Lab Ninja updates the delivery status and you get a notification!</li>
-            <li>You confirm and rate delivery! </li>
-          </ol>
-        </div>
-    </div>
-    </section>
-  </main>
-<hr style="width: 100%;">
-<footer>
-     <a href="https://lifebank.ng" target="_blank">with <fa-icon [icon]="heart"></fa-icon> from Lifebank</a>
-</footer>
+        <section class="kit" id="how">
+          <div class="kit__container">
+            <div class="kit__container-how">
+              <h1>How it works</h1>
+              <p>Our contactless delivery system has a defined process flow that completely prevents direct contact between your patients, our lab ninjas and your laboratory team. It is as follows:</p>
+              <ul>
+                <li>Call center agent receives your request.</li>
+                <li>Call center agent contacts your patient on the scheduled delivery day.</li>
+                <li>Your request is assigned to a LabBank Ninja</li>
+                <li>LabNinja rides to your patient's doorstep.</li>
+                <li>Lab Ninja calls the patient and explains terms of the delivery scheme - No contact, No exchange of items</li>
+                <li>Once patients step out, Lab Ninja opens the section button by pressing a button.</li>
+                <li>Patients put his/her sample in this temperature regulated compartment.</li>
+                <li>LabNinja repeats the same step to open the waste section.</li>
+                <li>Patient puts any medical waste into the Biohazard bag.</li>
+                <li>Lab Ninja updates pickup status on the app - you get a notification!</li>
+                <li>Lab Ninja rides to drop off samples and waste in your laboratory - Same terms of pickup applies.</li>
+                <li>Lab Ninja completes the order on his app and you are asked to confirm and rate the delivery</li>
+              </ul>
+            </div>
+            <div class="kit__container-benefit">
+              <h1>Benefits</h1>
+              <ul>
+                <li>Patients sampling and transport is safe and reliable</li>
+                <li>Your staff are protected from exposure to potential infection.</li>
+                <li>Ease of access to testing facilities for some groups, such as the elderly and the sick. </li>
+                <li>Improved lead time with optimum cost-effectiveness.</li>
+                <li>Restrict movement and reduce the person-person transfer of the virus by limiting contact.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
 
+        <section class="faq">
+          <div class="faq__content">
+            <h1 id="faq">Frequently Asked Questions</h1>
+            <mat-accordion class="example-headers-align" multi>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Why Self Collection?
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <p>Self collection protects our healthcare workers from exposure to potential infection. It is also more convenient and efficient rather than driving to a center. It also makes it easy for certain groups like the sick and elderly to get tested.</p>
+
+              </mat-expansion-panel>
+            </mat-accordion>
+
+            <mat-accordion class="example-headers-align" multi>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Is Self Collection acceptable
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <p>Yes, our kit comes with detailed instructions and an audio guide to ensure patients collect samples safely and effectively. If you follow all instructions carefully you will get samples that yield accurate results, just like a sample collected by a professional.</p>
+
+              </mat-expansion-panel>
+            </mat-accordion>
+
+            <mat-accordion class="example-headers-align" multi>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    How do I order a kit?
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <p>As a lab partner you can easily request for as many kits as you want from your dashboard. Individuals have to request for our kits with our registered lab partners.</p>
+
+              </mat-expansion-panel>
+            </mat-accordion>
+
+            <mat-accordion class="example-headers-align" multi>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Why is the Contactless Delivery style better?
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <p>Our contactless pick up and drop off delivery model ensures that there is zero contact between the patient, our rider and your laboratory staff. It promotes social distancing and removes all forms of person-person infection transmission.
+                </p>
+              </mat-expansion-panel>
+            </mat-accordion>
+
+            <mat-accordion class="example-headers-align" multi>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    When do I get my results?
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <p>Kindly contact the diagnostic center where you ordered the kit from to get information about the test turnaround time.</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+
+          </div>
+        </section>
+      </main>
+    <hr style="width: 100%;">
+    <footer>
+        <a href="https://lifebank.ng" target="_blank">with <fa-icon [icon]="heart"></fa-icon> from Lifebank</a>
+    </footer>
+</section>

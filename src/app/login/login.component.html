@@ -1,26 +1,27 @@
-<section class="header">
-  <a [routerLink] = "['/home']"><img src="../../assets/images/logo.png" alt="logo"></a>
-</section>
+<h2 mat-dialog-title>Login</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="loginForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName = 'email'>
+      <mat-error *ngIf="loginForm.get('email').errors?.email && !loginForm.get('email').errors?.required">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="loginForm.get('email').errors?.required">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
 
-<section class="container">
-  <div class="login">
-    <h3>login</h3>
-      <form>
-        <div class="form__control">
-            <input type="email" placeholder="Username" class="form__control-input" formControlName="email" required>
-        </div>
-        <div class="form__control">
-            <input type="password" name="password" placeholder="Password" class="form__control-input" formControlName="password" required>
-        </div>
-        <div>
-          <a class="remember__link">Don't remember password?</a>
-        </div>
-        <button class="btn">login</button>
-    </form>
-  </div>
-</section>
-<hr style="width: 100%;">
-<footer>
-  <a href="https://lifebank.ng" target="_blank">with <fa-icon [icon]="heart"></fa-icon> from Lifebank</a>
-</footer>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" formControlName = 'pwd'>
+      <mat-error *ngIf="loginForm.get('pwd').errors?.required">
+        Password is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <button class="btn" [mat-dialog-close] = "loginForm.value" [disabled] = "!loginForm.valid">Login</button>
+</form>
+</mat-dialog-content>
+
+
 

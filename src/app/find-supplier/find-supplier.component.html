@@ -1,0 +1,53 @@
+<div class="nav sticky-nav-wrapper">
+  <div class="nav__logo">
+    <a [routerLink] = "['/home']"><img src="../../../assets/images/final-logo.gif" alt="logo"></a>
+  </div>
+  <nav class="custom-nav-class" ngStickyNav>
+    <ul>
+      <li><a (click) = "openSupplierDialog()">Sign up your lab</a></li>
+      <li><a [routerLink] = "['/find-supplier']" class="active">Find a supplier</a></li>
+    </ul>
+  </nav>
+  <a class="link_login" (click) = "openLoginDialog()">login &#8594;</a>
+</div>
+
+
+<section class="header">
+  <div class="header__text">
+    <h2>Find a Supplier</h2>
+    <p>LifeBank’s home sample collection kit was created to help increase the testing capacity in our communities by expanding the access to testing facilities of diagnostic centers while protecting the safety of all parties involved through our contactless delivery style.</p>
+    <p>We work with laboratories/diagnostic centers to make the kits available to their patients.
+      Look through our partner's list to request a kit. </p>
+  </div>
+</section>
+
+<section class="table">
+  <div class="transaction__content">
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-2">Name</div>
+            <div class="col col-3">Location</div>
+            <div class="col col-4">Contact</div>
+        </li>
+        <li class="table-row" *ngFor="let supplier of suppliers">
+            <div class="col col-3" data-label="Name">
+                {{supplier?.org}}
+            </div>
+            <div class="col col-4" data-label="Location">
+                {{supplier?.state}} - {{supplier?.country}}
+            </div>
+            <div class="col col-5" data-label="customer Address">
+                {{supplier?.email}} - {{supplier?.phone}}
+            </div>
+        </li>
+    </ul>
+</div>
+</section>
+
+<hr style="width: 100%;">
+
+<footer>
+  <a href="https://lifebank.ng" target="_blank">with <fa-icon [icon]="heart"></fa-icon> from Lifebank</a>
+</footer>
+
+
