@@ -48,16 +48,19 @@ export class DashboardComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.dataService.requestKit(JSON.parse(JSON.stringify(result))).subscribe(response => {
-        if (!response['ok']) {
-            this.notification.error('You request failed. Please try again.', 'Notification');
-          } else {
-            this.notification.success('Your request was successful', 'Notification');
-          }
-      },
-      error => {
-        console.log(error);
-      });
+      if (result) {
+        this.dataService.requestKit(JSON.parse(JSON.stringify(result))).subscribe(response => {
+          if (!response['ok']) {
+              this.notification.error('You request failed. Please try again.', 'Notification');
+            } else {
+              this.notification.success('Your request was successful', 'Notification');
+              window.location.reload();
+            }
+        },
+        error => {
+          console.log(error);
+        });
+      }
     });
   }
 

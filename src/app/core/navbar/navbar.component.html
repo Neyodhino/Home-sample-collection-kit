@@ -6,10 +6,10 @@
     <ul>
       <li><a (click) = "openSupplierDialog()">Sign up your lab</a></li>
       <li><a [routerLink] = "['/find-supplier']">Find a supplier</a></li>
-      <li><a href="#how">How it works</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
   </nav>
+  <a class="link_login" (click) = "openLoginDialog()">login &#8594;</a>
   <div class="nav__mobile">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
@@ -22,13 +22,12 @@
         <a [routerLink] = "['/find-supplier']">Find a supplier</a>
       </button>
       <button mat-menu-item>
-        <a href="#how">How it works</a>
-      </button>
-      <button mat-menu-item>
         <a href="#faq">FAQ</a>
+      </button>
+      <button mat-menu-item (click) = "openLoginDialog()">
+        <span>login &#8594;</span>
       </button>
     </mat-menu>
   </div>
-  <a class="link_login" (click) = "openLoginDialog()">login &#8594;</a>
 </div>
 

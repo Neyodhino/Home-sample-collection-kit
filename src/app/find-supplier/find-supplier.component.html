@@ -1,14 +1,26 @@
-<div class="nav sticky-nav-wrapper">
+<div class="nav" id="navbar">
   <div class="nav__logo">
     <a [routerLink] = "['/home']"><img src="../../../assets/images/final-logo.gif" alt="logo"></a>
   </div>
-  <nav class="custom-nav-class" ngStickyNav>
+  <nav class="nav__links">
     <ul>
       <li><a (click) = "openSupplierDialog()">Sign up your lab</a></li>
-      <li><a [routerLink] = "['/find-supplier']" class="active">Find a supplier</a></li>
+      <li><a [routerLink] = "['/find-supplier']">Find a supplier</a></li>
     </ul>
   </nav>
-  <a class="link_login" (click) = "openLoginDialog()">login &#8594;</a>
+  <div class="nav__mobile">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click) = "openSupplierDialog()">
+        <span>Sign up your lab</span>
+      </button>
+      <button mat-menu-item (click) = "openLoginDialog()">
+        <span>login &#8594;</span>
+      </button>
+    </mat-menu>
+  </div>
 </div>
 
 

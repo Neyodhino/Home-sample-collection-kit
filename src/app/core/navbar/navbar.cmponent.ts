@@ -34,17 +34,17 @@ export class NavbarComponent implements OnInit {
       });
 
       dialogRef.afterClosed().subscribe(result => {
-        this.dataService.registerLabPartner(JSON.parse(JSON.stringify(result))).subscribe(response => {
-          console.log(response);
-          if (!response['ok']) {
-            this.notification.error('An error occurred, please try again.', 'Notification');
-          } else {
-            this.notification.success('Registration successful. An email has been sent to your email address', 'Notification');
-          }
-        });
-      },
-      error => {
-        console.log(error);
+        if ( result ) {
+          this.dataService.registerLabPartner(JSON.parse(JSON.stringify(result))).subscribe(response => {
+            if (!response['ok']) {
+              this.notification.error('An error occurred, please try again.', 'Notification');
+            } else {
+              this.notification.success('Registration successful. An email has been sent to your email address', 'Notification');
+            }
+          }, error => {
+            console.log(error);
+          });
+        }
       });
     }
 
@@ -54,19 +54,21 @@ export class NavbarComponent implements OnInit {
       });
 
       dialogRef.afterClosed().subscribe(result => {
-        this.auth.login(JSON.parse(JSON.stringify(result))).subscribe(response => {
-          console.log(response);
-          if (!response['ok']) {
-            this.notification.error(response['description'], 'Notification');
-          } else {
-            localStorage.setItem('loginDetails', JSON.stringify(response['description']));
-            this.router.navigate(['/dashboard']);
-            this.notification.success('Welcome to your dashboard', 'Notification');
-          }
-        },
-        error => {
-          console.log(error);
-        });
+        if ( result ) {
+          this.auth.login(JSON.parse(JSON.stringify(result))).subscribe(response => {
+            console.log(response);
+            if (!response['ok']) {
+              this.notification.error(response['description'], 'Notification');
+            } else {
+              localStorage.setItem('loginDetails', JSON.stringify(response['description']));
+              this.router.navigate(['/dashboard']);
+              this.notification.success('Welcome to your dashboard', 'Notification');
+            }
+          },
+          error => {
+            console.log(error);
+          });
+        }
       });
     }
 }

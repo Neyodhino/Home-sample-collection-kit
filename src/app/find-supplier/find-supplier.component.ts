@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { DOCUMENT } from "@angular/common";
 import { DataService } from '../core/services/data-service.service';
 import { AuthenticationService } from '../core/services/authentication.service';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +21,7 @@ export class FindSupplierComponent implements OnInit {
   suppliers: Array<object>;
 
   constructor(
+    @Inject(DOCUMENT) document,
     private dataService: DataService,
     private auth: AuthenticationService,
     public dialog: MatDialog,
@@ -35,6 +37,17 @@ export class FindSupplierComponent implements OnInit {
     error => {
       console.log(error);
     });
+   }
+
+   @HostListener('window:scroll', ['$event'])
+   onWindowScroll(e): void {
+    if (window.pageYOffset > 90) {
+      const element = document.getElementById('navbar');
+      element.classList.add('sticky');
+    } else {
+     const element = document.getElementById('navbar');
+     element.classList.remove('sticky');
+    }
    }
 
 

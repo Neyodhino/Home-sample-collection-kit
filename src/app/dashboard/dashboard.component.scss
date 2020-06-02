@@ -22,7 +22,7 @@
 }
 
 .container {
-  height: 76vh;
+  min-height: 75vh;
   &__informations{
     width: 30%;
     margin: 50px auto;
@@ -33,6 +33,7 @@
     .container__information {
       box-shadow: -4px 4px 20px #cecece;
       padding: 30px 60px;
+      width: 250px;
       text-align: center;
       margin: 30px auto;
       h3 {
@@ -63,5 +64,22 @@ footer{
     color: orangered;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
+  }
+}
+
+@media(max-width: 800px){
+  .nav{
+    padding: 26px 30px;
+  }
+  .container{
+    .container__informations {
+      width: 75%;
+    }
+  }
+  .container__information{
+    width: 500px;
+  }
+  footer{
+    padding: 20px 10px;
   }
 }

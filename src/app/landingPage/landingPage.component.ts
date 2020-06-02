@@ -14,15 +14,8 @@ import { DataService } from '../core/services/data-service.service';
   selector: 'landingPage',
   templateUrl: './landingPage.component.html',
   styleUrls: ['./landingPage.component.scss'],
-  animations: [
-    trigger('fade',
-    [
-      state('void', style({ opacity : 0})),
-      transition(':enter', [ animate(300)]),
-      transition(':leave', [ animate(500)]),
-    ]
-)]
 })
+
 export class LandingPageComponent implements OnInit {
   heart = faHeart;
   @ViewChild(MatAccordion, {static: false}) accordion: MatAccordion;
@@ -58,13 +51,17 @@ export class LandingPageComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.dataService.registerLabPartner(JSON.parse(JSON.stringify(result))).subscribe(response => {
-        if (!response['ok']) {
-          this.notification.error('An error occurred, please try again.', 'Notification');
-        } else {
-          this.notification.success('Registration successful. An email has been sent to your email address', 'Notification');
-        }
-      }, error => console.log(error));
+      if (result) {
+        this.dataService.registerLabPartner(JSON.parse(JSON.stringify(result))).subscribe(response => {
+          if (!response['ok']) {
+            this.notification.error('An error occurred, please try again.', 'Notification');
+          } else {
+            this.notification.success('Registration successful. An email has been sent to your email address', 'Notification');
+          }
+        }, error => {
+          console.log(error);
+        });
+      }
     });
   }
 
@@ -75,4 +72,6 @@ export class LandingPageComponent implements OnInit {
     link.click();
   }
 }
+
+
 
