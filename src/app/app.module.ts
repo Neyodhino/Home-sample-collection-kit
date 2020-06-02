@@ -26,6 +26,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LabPartnerComponent } from './supplierDialog/lab-partner.component';
 import {RequestKitComponent} from './request-kit/request-kit.component';
 import { FindSupplierComponent } from './find-supplier/find-supplier.component';
+import { CanActivateGuard } from "./core/guards/dashboard-route.guard";
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { FindSupplierComponent } from './find-supplier/find-supplier.component';
     StickyNavModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [CanActivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

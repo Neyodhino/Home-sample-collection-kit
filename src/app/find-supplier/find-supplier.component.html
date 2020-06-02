@@ -8,6 +8,7 @@
       <li><a [routerLink] = "['/find-supplier']">Find a supplier</a></li>
     </ul>
   </nav>
+  <a class="link_login" (click) = "openLoginDialog()">login &#8594;</a>
   <div class="nav__mobile">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
@@ -22,7 +23,6 @@
     </mat-menu>
   </div>
 </div>
-
 
 <section class="header">
   <div class="header__text">

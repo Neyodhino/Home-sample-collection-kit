@@ -1,5 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CanActivateGuard } from './core/guards/dashboard-route.guard';
 
 import { LandingPageComponent } from './landingPage/landingPage.component';
 import { LoginComponent } from './login/login.component';
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: LandingPageComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'dashboard', component: DashboardComponent},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [CanActivateGuard]},
   {path: 'request', component: RequestKitComponent},
   {path: 'lab', component: LabPartnerComponent},
   {path: 'find-supplier', component: FindSupplierComponent}
