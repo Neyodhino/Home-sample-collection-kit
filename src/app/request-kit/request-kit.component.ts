@@ -52,4 +52,8 @@ export class RequestKitComponent implements OnInit {
       state: ['', Validators.required]
     });
   }
+
+  submit() {
+   console.log( this.requestForm.value);
+  }
 }

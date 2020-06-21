@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.dataService.requestKit(JSON.parse(JSON.stringify(result))).subscribe(response => {
+        this.dataService.requestKit(result).subscribe(response => {
           if (!response['ok']) {
               this.notification.error('You request failed. Please try again.', 'Notification');
             } else {

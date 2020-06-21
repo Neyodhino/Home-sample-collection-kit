@@ -28,4 +28,3 @@ export class DataService {
     return this.http.post(`${BASE_URL}/v1/dashboard/`, id);
   }
 }
-

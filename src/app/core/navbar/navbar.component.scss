@@ -1,15 +1,15 @@
 @import '../../../global/abstracts/variables';
+@import '../../../global/components/button';
 
 
-.nav{
+.nav {
   padding: 5px 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 5px -20px 50px $paragraph-color;
   width: 100%;
 
-  &__mobile{
+  &__mobile {
     display: none;
   }
 
@@ -22,6 +22,7 @@
       height: 100%;
     }
   }
+
   ul{
     display: flex;
     list-style: none;
@@ -54,21 +55,6 @@
 a {
   text-decoration: none;
 
-}
-
-.link_login{
-  font-size: 2.2rem;
-  text-decoration: none;
-  color: black;
-  background-color: $primary-color;
-  padding: 16px 40px;
-  color: $button-text--color;
-  border-radius: 40px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 0.2rem;
-  height: 70%;
 }
 
 @media(max-width: 1275px) {
@@ -104,7 +90,7 @@ a {
   .nav__links {
     display: none;
   }
-  .link_login{
+  .btn{
     display: none;
   }
   .nav__mobile{

@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener, Inject, ViewChild } from '@angular/core';
-import { trigger, state, transition, style, animate } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import {MatAccordion} from '@angular/material/expansion';
@@ -72,6 +71,4 @@ export class LandingPageComponent implements OnInit {
     link.click();
   }
 }
-
-
 

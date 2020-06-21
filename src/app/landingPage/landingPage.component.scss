@@ -1,5 +1,5 @@
 @import '../../global/abstracts/variables';
-
+@import '../../global/components/button';
 .headline {
   display: flex;
   justify-content: space-around;
@@ -40,18 +40,6 @@
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
   }
-  button{
-    margin-top: 50px;
-    background-color: $primary-color;
-    padding: 16px 90px;
-    color: $button-text--color;
-    border-radius: 40px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.2rem;
-    outline: none;
-  }
 }
 
 .main{
@@ -79,18 +67,6 @@
       }
     }
   }
-  button {
-    margin-top: 20px;
-    background-color:  $primary-color;
-    padding: 16px 70px;
-    color: $button-text--color;
-    border-radius: 40px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.2rem;
-    outline: none;
-  }
 }
 
 .links {
@@ -109,21 +85,6 @@
   width: 60%;
   margin: 0 auto;
   text-align: center;
-
-  a{
-    margin: 50px auto 0 auto;
-    display: block;
-    background-color: $primary-color;
-    padding: 16px 90px;
-    color: $button-text--color;
-    border-radius: 40px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.2rem;
-    outline: none;
-    width: 300px;
-  }
 
   &-text{
     margin-top: 20px;

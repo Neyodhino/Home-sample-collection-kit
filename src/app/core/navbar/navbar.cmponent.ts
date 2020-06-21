@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
   faCoffee = faCoffee;
   status: false;
   message: string;
+  
   constructor(
     public dialog: MatDialog,
     private auth: AuthenticationService,

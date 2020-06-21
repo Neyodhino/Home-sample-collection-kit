@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Request a kit</h2>
 <mat-dialog-content class="mat-typography">
-  <form [formGroup]= "requestForm">
+  <form [formGroup]= "requestForm" (ngSubmit)="submit()" >
 
   <mat-form-field appearance="outline">
     <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose date and time" [disabled]="disabled" formControlName = "dateTime">
@@ -64,4 +64,3 @@
     <button class="btn" [disabled]="!requestForm.valid" [mat-dialog-close] = "requestForm.value">Request</button>
 </form>
 </mat-dialog-content>
-
